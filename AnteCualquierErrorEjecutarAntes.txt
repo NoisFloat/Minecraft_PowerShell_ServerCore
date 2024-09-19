@@ -1,0 +1,39 @@
+Permite la ejecucion de Scripts de PowerShell que vienen desde internet
+Tambien evita cualquier restriccion de seguridad de PS 
+
+#Set-ExecutionPolicy Bypass -Scope Process
+
+
+
+
+
+
+
+
+Explicacion de los parametros de firewall
+
+-DisplayName: Nombre descriptivo de la regla. 
+Ayuda a identificar la regla en la lista de reglas de firewall.
+
+-Direction: Define la dirección del tráfico.
+ Inbound para tráfico entrante y Outbound para tráfico saliente.
+
+-Protocol: Protocolo a aplicar, en este caso, 
+TCP (Transmission Control Protocol).
+
+-LocalPort: Puerto local al que se aplica la regla.
+ En este caso, el puerto 404.
+
+-Action: Define la acción a tomar,
+ Allow para permitir el tráfico.
+
+-Enabled: Define si la regla está habilitada.
+ True significa que la regla está activa.
+
+-Profile: Define los perfiles de red a los que se 
+aplica la regla. Domain, Private, y Public son 
+los perfiles disponibles.
+
+-IPAddressVersion: Define la versión de IP para la regla,
+ IPv6 para tráfico IPv6. Si no se especifica, 
+ el comando se aplica a IPv4 por defecto.
